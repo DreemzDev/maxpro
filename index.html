@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAXPRO - Профессиональные электромонтажные работы</title>
+    <meta
+      name="description"
+      content="Профессиональные электромонтажные работы в квартирах и домах. Качественно, быстро, надежно."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#00A8E8",
+              dark: "#0B132B",
+              text: "#1C1C1C",
+              light: "#F8F9FA",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .section-padding {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+      }
+
+      @media (max-width: 768px) {
+        .section-padding {
+          padding-top: 3rem;
+          padding-bottom: 3rem;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-light text-text">
+    <!-- Шапка сайта -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+      <div class="container mx-auto px-4 py-3">
+        <div class="flex justify-between items-center">
+          <div class="flex items-center">
+            <a href="#" class="flex items-center">
+              <span class="text-primary text-3xl font-bold"
+                >MAX<span class="text-dark">PRO</span></span
+              >
+            </a>
+          </div>
+
+          <!-- Мобильное меню (кнопка) -->
+          <div class="block md:hidden">
+            <button
+              id="mobile-menu-button"
+              class="text-dark focus:outline-none"
+            >
+              <i class="fas fa-bars text-2xl"></i>
+            </button>
+          </div>
+
+          <!-- Десктопное меню -->
+          <nav class="hidden md:flex items-center space-x-8">
+            <a
+              href="#services"
+              class="text-dark hover:text-primary transition-colors"
+              >Услуги</a
+            >
+            <a
+              href="#advantages"
+              class="text-dark hover:text-primary transition-colors"
+              >Преимущества</a
+            >
+            <a
+              href="#portfolio"
+              class="text-dark hover:text-primary transition-colors"
+              >Портфолио</a
+            >
+            <a
+              href="#process"
+              class="text-dark hover:text-primary transition-colors"
+              >Процесс</a
+            >
+            <a
+              href="#pricing"
+              class="text-dark hover:text-primary transition-colors"
+              >Цены</a
+            >
+          </nav>
+
+          <div class="hidden md:flex items-center">
+            <a
+              href="tel:+79001234567"
+              class="flex items-center text-dark hover:text-primary transition-colors"
+            >
+              <i class="fas fa-phone-alt mr-2"></i>
+              <span>+7 (900) 123-45-67</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Мобильное меню (выпадающее) -->
+      <div id="mobile-menu" class="hidden bg-white shadow-md md:hidden">
+        <div class="container mx-auto px-4 py-3">
+          <nav class="flex flex-col space-y-3">
+            <a
+              href="#services"
+              class="text-dark hover:text-primary transition-colors"
+              >Услуги</a
+            >
+            <a
+              href="#advantages"
+              class="text-dark hover:text-primary transition-colors"
+              >Преимущества</a
+            >
+            <a
+              href="#portfolio"
+              class="text-dark hover:text-primary transition-colors"
+              >Портфолио</a
+            >
+            <a
+              href="#process"
+              class="text-dark hover:text-primary transition-colors"
+              >Процесс</a
+            >
+            <a
+              href="#pricing"
+              class="text-dark hover:text-primary transition-colors"
+              >Цены</a
+            >
+            <a
+              href="tel:+79001234567"
+              class="flex items-center text-dark hover:text-primary transition-colors"
+            >
+              <i class="fas fa-phone-alt mr-2"></i>
+              <span>+7 (900) 123-45-67</span>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Главный баннер -->
+    <section
+      class="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-r from-dark to-primary text-white"
+    >
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-10 md:mb-0">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">
+              Профессиональные электромонтажные работы
+            </h1>
+            <p class="text-xl mb-8 opacity-90">
+              Качественная установка и монтаж электрики в квартирах и домах.
+              Работаю быстро, надежно и с гарантией.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a
+                href="#services"
+                class="bg-white text-primary hover:bg-gray-100 py-3 px-8 rounded-md font-semibold transition-colors shadow-lg"
+              >
+                Мои услуги
+              </a>
+              <a
+                href="tel:+79001234567"
+                class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary py-3 px-8 rounded-md font-semibold transition-colors"
+              >
+                Получить консультацию
+              </a>
+            </div>
+          </div>
+          <div class="md:w-1/2">
+            <img
+              src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=2069&auto=format&fit=crop"
+              alt="Электромонтажные работы"
+              class="rounded-lg shadow-2xl w-full"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Услуги -->
+    <section id="services" class="section-padding bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 text-dark">
+            Наши услуги
+          </h2>
+          <p class="text-lg max-w-3xl mx-auto opacity-75">
+            Предлагаю полный спектр электромонтажных услуг для квартир и домов
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Услуга 1 -->
+          <div
+            class="bg-light rounded-lg p-8 shadow-md hover:shadow-lg transition-shadow"
+          >
+            <div class="text-primary text-4xl mb-6">
+              <i class="fas fa-plug"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4 text-dark">
+              Монтаж электропроводки
+            </h3>
+            <p class="mb-4 opacity-75">
+              Полная замена или монтаж новой электропроводки в квартирах и домах
+              с соблюдением всех норм безопасности.
+            </p>
+            <ul class="list-disc list-inside opacity-75 mb-6">
+              <li>Прокладка кабелей</li>
+              <li>Установка электрощитов</li>
+              <li>Автоматические выключатели</li>
+            </ul>
+          </div>
+
+          <!-- Услуга 2 -->
+          <div
+            class="bg-light rounded-lg p-8 shadow-md hover:shadow-lg transition-shadow"
+          >
+            <div class="text-primary text-4xl mb-6">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4 text-dark">
+              Установка освещения
+            </h3>
+            <p class="mb-4 opacity-75">
+              Монтаж любых осветительных приборов от простых светильников до
+              сложных систем освещения
+            </p>
+            <ul class="list-disc list-inside opacity-75 mb-6">
+              <li>Монтаж люстр и светильников</li>
+              <li>Установка точечного освещения</li>
+              <li>Умное освещение</li>
+            </ul>
+          </div>
+
+          <!-- Услуга 3 -->
+          <div
+            class="bg-light rounded-lg p-8 shadow-md hover:shadow-lg transition-shadow"
+          >
+            <div class="text-primary text-4xl mb-6">
+              <i class="fas fa-outlet"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4 text-dark">
+              Установка розеток и выключателей
+            </h3>
+            <p class="mb-4 opacity-75">
+              Монтаж розеток, выключателей и распределительных щитов любой
+              сложности и в любом количестве.
+            </p>
+            <ul class="list-disc list-inside opacity-75 mb-6">
+              <li>Монтаж розеток всех типов</li>
+              <li>Установка выключателей</li>
+              <li>Перенос электроточек</li>
+            </ul>
+          </div>
+
+          <!-- Услуга 4 -->
+          <div
+            class="bg-light rounded-lg p-8 shadow-md hover:shadow-lg transition-shadow"
+          >
+            <div class="text-primary text-4xl mb-6">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4 text-dark">
+              Установка УЗО и автоматов
+            </h3>
+            <p class="mb-4 opacity-75">
+              Сборка, монтаж и подключение электрощитов, установка автоматов
+              защиты и УЗО.
+            </p>
+            <ul class="list-disc list-inside opacity-75 mb-6">
+              <li>Монтаж УЗО и дифавтоматов</li>
+              <li>Установка автоматических выключателей</li>
+              <li>Защита от скачков напряжения</li>
+            </ul>
+          </div>
+
+          <!-- Услуга 5 -->
+          <div
+            class="bg-light rounded-lg p-8 shadow-md hover:shadow-lg transition-shadow"
+          >
+            <div class="text-primary text-4xl mb-6">
+              <i class="fas fa-wifi"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4 text-dark">Умный дом</h3>
+            <p class="mb-4 opacity-75">
+              Установка и настройка систем умного дома для комфортного и
+              эффективного управления
+            </p>
+            <ul class="list-disc list-inside opacity-75 mb-6">
+              <li>Умное освещение</li>
+              <li>Автоматизация электроприборов</li>
+              <li>Установка датчиков и контроллеров</li>
+            </ul>
+          </div>
+
+          <!-- Услуга 6 -->
+          <div
+            class="bg-light rounded-lg p-8 shadow-md hover:shadow-lg transition-shadow"
+          >
+            <div class="text-primary text-4xl mb-6">
+              <i class="fas fa-tools"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4 text-dark">
+              Ремонт и диагностика
+            </h3>
+            <p class="mb-4 opacity-75">
+              Поиск и устранение неисправностей в электросети, замена старой
+              проводки, ремонт электрооборудования.
+            </p>
+            <ul class="list-disc list-inside opacity-75 mb-6">
+              <li>Диагностика проблем</li>
+              <li>Устранение коротких замыканий</li>
+              <li>Срочный вызов электрика</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section
+      id="advantages"
+      class="section-padding bg-gradient-to-r from-primary/10 to-dark/10"
+    >
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 text-dark">
+            Почему выбирают меня
+          </h2>
+          <p class="text-lg max-w-3xl mx-auto opacity-75">
+            Я гарантируем высокое качество работ и полное соответствие всем
+            стандартам безопасности
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Преимущество 1 -->
+          <div
+            class="bg-white rounded-lg p-6 shadow text-center hover:shadow-lg transition-shadow"
+          >
+            <div
+              class="inline-flex items-center justify-center w-16 h-16 mb-6 rounded-full bg-primary/10 text-primary"
+            >
+              <i class="fas fa-medal text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-dark">Опыт более 10 лет</h3>
+            <p class="opacity-75">
+              Имею многолетний опыт работы в сфере электромонтажа
+            </p>
+          </div>
+
+          <!-- Преимущество 2 -->
+          <div
+            class="bg-white rounded-lg p-6 shadow text-center hover:shadow-lg transition-shadow"
+          >
+            <div
+              class="inline-flex items-center justify-center w-16 h-16 mb-6 rounded-full bg-primary/10 text-primary"
+            >
+              <i class="fas fa-clock text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-dark">Соблюдение сроков</h3>
+            <p class="opacity-75">
+              Выполняем работы точно в срок, указанный в договоре
+            </p>
+          </div>
+
+          <!-- Преимущество 3 -->
+          <div
+            class="bg-white rounded-lg p-6 shadow text-center hover:shadow-lg transition-shadow"
+          >
+            <div
+              class="inline-flex items-center justify-center w-16 h-16 mb-6 rounded-full bg-primary/10 text-primary"
+            >
+              <i class="fas fa-shield-alt text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-dark">Гарантия на работы</h3>
+            <p class="opacity-75">
+              Предоставляем гарантию на все выполненные работы до 3 лет
+            </p>
+          </div>
+
+          <!-- Преимущество 4 -->
+          <div
+            class="bg-white rounded-lg p-6 shadow text-center hover:shadow-lg transition-shadow"
+          >
+            <div
+              class="inline-flex items-center justify-center w-16 h-16 mb-6 rounded-full bg-primary/10 text-primary"
+            >
+              <i class="fas fa-money-bill-wave text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-dark">Доступные цены</h3>
+            <p class="opacity-75">
+              Честные цены без скрытых платежей и дополнительных расходов
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Портфолио -->
+    <section id="portfolio" class="section-padding bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 text-dark">
+            Мои работы
+          </h2>
+          <p class="text-lg max-w-3xl mx-auto opacity-75">
+            Примеры проектов электромонтажа, которые я реализовал для своих
+            клиентов
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Проект 1 -->
+          <div class="overflow-hidden rounded-lg shadow-md group">
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1558211583-d26f610c1eb1?q=80&w=2006&auto=format&fit=crop"
+                alt="Электромонтаж в квартире"
+                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-90 transition-opacity flex items-center justify-center"
+              >
+                <div class="text-white text-center p-4">
+                  <h3 class="text-xl font-bold mb-2">Полная замена проводки</h3>
+                  <p>Трехкомнатная квартира, 78 м²</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 bg-light">
+              <h3 class="font-bold text-dark">Электромонтаж в новостройке</h3>
+              <p class="text-sm opacity-75">Полный комплекс работ</p>
+            </div>
+          </div>
+
+          <!-- Проект 2 -->
+          <div class="overflow-hidden rounded-lg shadow-md group">
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1564540574859-0dfb63985953?q=80&w=2070&auto=format&fit=crop"
+                alt="Умное освещение"
+                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-90 transition-opacity flex items-center justify-center"
+              >
+                <div class="text-white text-center p-4">
+                  <h3 class="text-xl font-bold mb-2">Умное освещение</h3>
+                  <p>Коттедж, 250 м²</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 bg-light">
+              <h3 class="font-bold text-dark">Умный дом</h3>
+              <p class="text-sm opacity-75">Автоматизация освещения</p>
+            </div>
+          </div>
+
+          <!-- Проект 3 -->
+          <div class="overflow-hidden rounded-lg shadow-md group">
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1556020685-ae41abfc9365?q=80&w=1974&auto=format&fit=crop"
+                alt="Электрощиток"
+                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-90 transition-opacity flex items-center justify-center"
+              >
+                <div class="text-white text-center p-4">
+                  <h3 class="text-xl font-bold mb-2">Сборка электрощита</h3>
+                  <p>Офисное помещение, 120 м²</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 bg-light">
+              <h3 class="font-bold text-dark">Монтаж электрощита</h3>
+              <p class="text-sm opacity-75">Установка автоматики</p>
+            </div>
+          </div>
+
+          <!-- Проект 4 -->
+          <div class="overflow-hidden rounded-lg shadow-md group">
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?q=80&w=2070&auto=format&fit=crop"
+                alt="Декоративное освещение"
+                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-90 transition-opacity flex items-center justify-center"
+              >
+                <div class="text-white text-center p-4">
+                  <h3 class="text-xl font-bold mb-2">Декоративное освещение</h3>
+                  <p>Квартира-студия, 45 м²</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 bg-light">
+              <h3 class="font-bold text-dark">Световой дизайн</h3>
+              <p class="text-sm opacity-75">Точечное освещение</p>
+            </div>
+          </div>
+
+          <!-- Проект 5 -->
+          <div class="overflow-hidden rounded-lg shadow-md group">
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1523731407965-2430cd12f5e4?q=80&w=2070&auto=format&fit=crop"
+                alt="Монтаж розеток"
+                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-90 transition-opacity flex items-center justify-center"
+              >
+                <div class="text-white text-center p-4">
+                  <h3 class="text-xl font-bold mb-2">Перенос розеток</h3>
+                  <p>Двухкомнатная квартира, 56 м²</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 bg-light">
+              <h3 class="font-bold text-dark">Установка розеток</h3>
+              <p class="text-sm opacity-75">Полная замена и перенос</p>
+            </div>
+          </div>
+
+          <!-- Проект 6 -->
+          <div class="overflow-hidden rounded-lg shadow-md group">
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1545259741-2ea3ebf61fa3?q=80&w=2070&auto=format&fit=crop"
+                alt="Электромонтаж в частном доме"
+                class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-90 transition-opacity flex items-center justify-center"
+              >
+                <div class="text-white text-center p-4">
+                  <h3 class="text-xl font-bold mb-2">Электрификация дома</h3>
+                  <p>Частный дом, 180 м²</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 bg-light">
+              <h3 class="font-bold text-dark">Электромонтаж в доме</h3>
+              <p class="text-sm opacity-75">С нуля под ключ</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Процесс работы -->
+    <section
+      id="process"
+      class="section-padding bg-gradient-to-r from-dark/10 to-primary/10"
+    >
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 text-dark">
+            Как мы работаем
+          </h2>
+          <p class="text-lg max-w-3xl mx-auto opacity-75">
+            Прозрачный и эффективный процесс работы для вашего комфорта
+          </p>
+        </div>
+
+        <div class="relative">
+          <!-- Линия процесса для десктопа -->
+          <div
+            class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary/30 top-0"
+          ></div>
+
+          <!-- Шаг 1 -->
+          <div
+            class="relative flex flex-col md:flex-row md:items-center mb-12 md:mb-24"
+          >
+            <div class="md:w-1/2 md:pr-16 mb-6 md:mb-0 md:text-right">
+              <h3 class="text-2xl font-bold mb-3 text-dark">
+                Заявка и консультация
+              </h3>
+              <p class="opacity-75 leading-relaxed">
+                Оставьте заявку на почте или позвоните мне. Я проконсультирует
+                вас по всем вопросам и запишу на удобное время
+              </p>
+            </div>
+            <div
+              class="md:hidden w-12 h-12 flex items-center justify-center rounded-full bg-primary text-white text-xl font-bold mb-4"
+            >
+              1
+            </div>
+            <div
+              class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-16 h-16 rounded-full bg-primary text-white text-xl font-bold items-center justify-center shadow-lg z-10"
+            >
+              1
+            </div>
+            <div class="md:w-1/2 md:pl-16">
+              <div class="bg-white p-6 rounded-lg shadow-md">
+                <i class="fas fa-headset text-primary text-3xl mb-4"></i>
+                <h4 class="font-bold mb-2">Что вы получаете:</h4>
+                <ul class="list-disc list-inside opacity-75">
+                  <li>Бесплатную консультацию</li>
+                  <li>Предварительную оценку стоимости</li>
+                  <li>Ответы на все вопросы</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Шаг 2 -->
+          <div
+            class="relative flex flex-col md:flex-row md:items-center mb-12 md:mb-24"
+          >
+            <div
+              class="md:w-1/2 md:pr-16 mb-6 md:mb-0 md:text-right order-1 md:order-2"
+            >
+              <div class="bg-white p-6 rounded-lg shadow-md">
+                <i class="fas fa-ruler-combined text-primary text-3xl mb-4"></i>
+                <h4 class="font-bold mb-2">Что вы получаете:</h4>
+                <ul class="list-disc list-inside opacity-75">
+                  <li>Точный замер помещения</li>
+                  <li>Детальный план работ</li>
+                  <li>Смету с точной стоимостью</li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="md:hidden w-12 h-12 flex items-center justify-center rounded-full bg-primary text-white text-xl font-bold mb-4"
+            >
+              2
+            </div>
+            <div
+              class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-16 h-16 rounded-full bg-primary text-white text-xl font-bold items-center justify-center shadow-lg z-10"
+            >
+              2
+            </div>
+            <div class="md:w-1/2 md:pl-16 order-2 md:order-1">
+              <h3 class="text-2xl font-bold mb-3 text-dark">Выезд замерщика</h3>
+              <p class="opacity-75 leading-relaxed">
+                Наш специалист выезжает на объект, делает замеры, оценивает
+                объем работ и составляет предварительную смету
+              </p>
+            </div>
+          </div>
+
+          <!-- Шаг 3 -->
+          <div
+            class="relative flex flex-col md:flex-row md:items-center mb-12 md:mb-24"
+          >
+            <div class="md:w-1/2 md:pr-16 mb-6 md:mb-0 md:text-right">
+              <h3 class="text-2xl font-bold mb-3 text-dark">
+                Заключение договора
+              </h3>
+              <p class="opacity-75 leading-relaxed">
+                После согласования всех деталей заключаем официальный договор с
+                указанием точных сроков и стоимости работ
+              </p>
+            </div>
+            <div
+              class="md:hidden w-12 h-12 flex items-center justify-center rounded-full bg-primary text-white text-xl font-bold mb-4"
+            >
+              3
+            </div>
+            <div
+              class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-16 h-16 rounded-full bg-primary text-white text-xl font-bold items-center justify-center shadow-lg z-10"
+            >
+              3
+            </div>
+            <div class="md:w-1/2 md:pl-16">
+              <div class="bg-white p-6 rounded-lg shadow-md">
+                <i class="fas fa-file-contract text-primary text-3xl mb-4"></i>
+                <h4 class="font-bold mb-2">Что вы получаете:</h4>
+                <ul class="list-disc list-inside opacity-75">
+                  <li>Официальный договор</li>
+                  <li>Фиксированную стоимость</li>
+                  <li>Гарантийные обязательства</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Шаг 4 -->
+          <div
+            class="relative flex flex-col md:flex-row md:items-center mb-12 md:mb-24"
+          >
+            <div
+              class="md:w-1/2 md:pr-16 mb-6 md:mb-0 md:text-right order-1 md:order-2"
+            >
+              <div class="bg-white p-6 rounded-lg shadow-md">
+                <i class="fas fa-hard-hat text-primary text-3xl mb-4"></i>
+                <h4 class="font-bold mb-2">Что вы получаете:</h4>
+                <ul class="list-disc list-inside opacity-75">
+                  <li>Качественное исполнение</li>
+                  <li>Соблюдение технологий</li>
+                  <li>Ежедневный отчет о работе</li>
+                </ul>
+              </div>
+            </div>
+            <div
+              class="md:hidden w-12 h-12 flex items-center justify-center rounded-full bg-primary text-white text-xl font-bold mb-4"
+            >
+              4
+            </div>
+            <div
+              class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-16 h-16 rounded-full bg-primary text-white text-xl font-bold items-center justify-center shadow-lg z-10"
+            >
+              4
+            </div>
+            <div class="md:w-1/2 md:pl-16 order-2 md:order-1">
+              <h3 class="text-2xl font-bold mb-3 text-dark">
+                Выполнение работ
+              </h3>
+              <p class="opacity-75 leading-relaxed">
+                Я приступаю к выполнению работ согласно утвержденному плану и в
+                соответствии со всеми нормами безопасности
+              </p>
+            </div>
+          </div>
+
+          <!-- Шаг 5 -->
+          <div class="relative flex flex-col md:flex-row md:items-center">
+            <div class="md:w-1/2 md:pr-16 mb-6 md:mb-0 md:text-right">
+              <h3 class="text-2xl font-bold mb-3 text-dark">Сдача объекта</h3>
+              <p class="opacity-75 leading-relaxed">
+                После завершения всех работ провожу тестирование систем,
+                демонстрирую результат и подписываем акт выполненных работ
+              </p>
+            </div>
+            <div
+              class="md:hidden w-12 h-12 flex items-center justify-center rounded-full bg-primary text-white text-xl font-bold mb-4"
+            >
+              5
+            </div>
+            <div
+              class="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-16 h-16 rounded-full bg-primary text-white text-xl font-bold items-center justify-center shadow-lg z-10"
+            >
+              5
+            </div>
+            <div class="md:w-1/2 md:pl-16">
+              <div class="bg-white p-6 rounded-lg shadow-md">
+                <i
+                  class="fas fa-clipboard-check text-primary text-3xl mb-4"
+                ></i>
+                <h4 class="font-bold mb-2">Что вы получаете:</h4>
+                <ul class="list-disc list-inside opacity-75">
+                  <li>Проверку всех систем</li>
+                  <li>Документацию и гарантию</li>
+                  <li>Рекомендации по эксплуатации</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Цены -->
+    <section id="pricing" class="section-padding bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 text-dark">
+            Тарифы и цены
+          </h2>
+          <p class="text-lg max-w-3xl mx-auto opacity-75">
+            Прозрачное ценообразование без скрытых платежей. Подберите
+            оптимальный пакет услуг
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Тариф 1 -->
+          <div
+            class="bg-light rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow"
+          >
+            <div class="bg-dark text-white p-6 text-center">
+              <h3 class="text-2xl font-bold mb-2">Базовый</h3>
+              <p class="opacity-75">Для небольших помещений</p>
+              <div class="text-4xl font-bold mt-4">от 15 000 ₽</div>
+              <p class="text-sm mt-2 opacity-75">за квартиру до 50 м²</p>
+            </div>
+            <div class="p-6">
+              <ul class="space-y-4">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                  <span>Замена электропроводки</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                  <span>Установка и подключение до 10 розеток</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                  <span>Установка до 5 выключателей</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                  <span>Монтаж распределительного щита</span>
+                </li>
+                <li class="flex items-start opacity-50">
+                  <i class="fas fa-times text-red-500 mt-1 mr-3"></i>
+                  <span>Установка и подключение светильников</span>
+                </li>
+                <li class="flex items-start opacity-50">
+                  <i class="fas fa-times text-red-500 mt-1 mr-3"></i>
+                  <span>Автоматизация электроприборов</span>
+                </li>
+              </ul>
+              <div class="mt-8">
+                <a
+                  href="tel:+79001234567"
+                  class="block w-full py-3 px-4 bg-primary text-white text-center rounded-md hover:bg-primary/90 transition-colors font-semibold"
+                >
+                  Заказать расчет
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Тариф 2 (оптимальный) -->
+          <div
+            class="bg-light rounded-lg overflow-hidden shadow-lg transform md:-translate-y-4 border-2 border-primary relative"
+          >
+            <div
+              class="absolute top-0 right-0 bg-primary text-white py-1 px-4 text-sm font-bold"
+            >
+              Популярный
+            </div>
+            <div class="bg-primary text-white p-6 text-center">
+              <h3 class="text-2xl font-bold mb-2">Стандарт</h3>
+              <p class="opacity-75">Для средних помещений</p>
+              <div class="text-4xl font-bold mt-4">от 25 000 ₽</div>
+              <p class="text-sm mt-2 opacity-75">за квартиру до 80 м²</p>
+            </div>
+            <div class="p-6">
+              <ul class="space-y-4">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                  <span>Замена электропроводки</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                  <span>Установка и подключение до 20 розеток</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                  <span>Установка до 10 выключателей</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                  <span>Монтаж распределительного щита</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                  <span>Установка и подключение светильников</span>
+                </li>
+                <li class="flex items-start opacity-50">
+                  <i class="fas fa-times text-red-500 mt-1 mr-3"></i>
+                  <span>Автоматизация электроприборов</span>
+                </li>
+              </ul>
+              <div class="mt-8">
+                <a
+                  href="tel:+79001234567"
+                  class="block w-full py-3 px-4 bg-primary text-white text-center rounded-md hover:bg-primary/90 transition-colors font-semibold"
+                >
+                  Заказать расчет
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Тариф 3 -->
+          <div
+            class="bg-light rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow"
+          >
+            <div class="bg-dark text-white p-6 text-center">
+              <h3 class="text-2xl font-bold mb-2">Премиум</h3>
+              <p class="opacity-75">Для больших помещений</p>
+              <div class="text-4xl font-bold mt-4">от 40 000 ₽</div>
+              <p class="text-sm mt-2 opacity-75">за квартиру/дом от 100 м²</p>
+            </div>
+            <div class="p-6">
+              <ul class="space-y-4">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                  <span>Замена электропроводки</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                  <span>Установка и подключение до 30 розеток</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                  <span>Установка до 15 выключателей</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                  <span>Монтаж распределительного щита</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                  <span>Установка и подключение светильников</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-primary mt-1 mr-3"></i>
+                  <span>Автоматизация электроприборов</span>
+                </li>
+              </ul>
+              <div class="mt-8">
+                <a
+                  href="tel:+79001234567"
+                  class="block w-full py-3 px-4 bg-primary text-white text-center rounded-md hover:bg-primary/90 transition-colors font-semibold"
+                >
+                  Заказать расчет
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div
+          class="mt-12 bg-gradient-to-r from-primary/10 to-dark/10 rounded-lg p-8 text-center"
+        >
+          <h3 class="text-2xl font-bold mb-4 text-dark">
+            Нужен индивидуальный расчет?
+          </h3>
+          <p class="mb-6 max-w-3xl mx-auto">
+            Мы можем разработать индивидуальное предложение под ваши потребности
+            и бюджет
+          </p>
+          <a
+            href="tel:+79001234567"
+            class="inline-flex items-center py-3 px-8 bg-primary text-white rounded-md hover:bg-primary/90 transition-colors font-semibold"
+          >
+            <i class="fas fa-tel mr-2"></i>
+            Получить индивидуальный расчет
+          </a>
+        </div> -->
+      </div>
+    </section>
+
+    <!-- CTA секция -->
+    <section class="py-16 bg-dark text-white">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">
+          Готовы начать сотрудничество?
+        </h2>
+        <p class="text-xl opacity-80 mb-8 max-w-3xl mx-auto">
+          Свяжитесь с нами сегодня, и мы поможем вам реализовать проект любой
+          сложности
+        </p>
+        <div
+          class="flex flex-col md:flex-row justify-center gap-4 items-center"
+        >
+          <a
+            href="tel:+79001234567"
+            class="py-4 px-8 bg-primary hover:bg-primary/90 transition-colors rounded-md font-semibold flex items-center justify-center"
+          >
+            <i class="fas fa-phone-alt mr-2"></i>
+            Позвонить мне
+          </a>
+          <!-- <a
+            href="#"
+            class="py-4 px-8 bg-transparent border-2 border-white hover:bg-white/10 transition-colors rounded-md font-semibold flex items-center justify-center"
+          >
+            <i class="fas fa-map-marker-alt mr-2"></i>
+            Найти нас на карте
+          </a> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Подвал сайта -->
+    <footer class="bg-light py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Блок с логотипом и описанием -->
+          <div class="md:col-span-1">
+            <div class="mb-4">
+              <a href="#" class="flex items-center">
+                <span class="text-primary text-3xl font-bold"
+                  >MAX<span class="text-dark">PRO</span></span
+                >
+              </a>
+            </div>
+            <p class="opacity-75 mb-4">
+              Профессиональные электромонтажные работы любой сложности в Пензе и
+              Пензенской области
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-dark hover:text-primary transition-colors"
+                ><i class="fab fa-vk text-xl"></i
+              ></a>
+              <a href="#" class="text-dark hover:text-primary transition-colors"
+                ><i class="fab fa-telegram text-xl"></i
+              ></a>
+              <a href="#" class="text-dark hover:text-primary transition-colors"
+                ><i class="fab fa-whatsapp text-xl"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Блок с услугами -->
+          <div class="md:col-span-1">
+            <h3 class="text-lg font-bold mb-4 text-dark">Услуги</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#services"
+                  class="opacity-75 hover:text-primary transition-colors"
+                  >Монтаж электропроводки</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="opacity-75 hover:text-primary transition-colors"
+                  >Установка освещения</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="opacity-75 hover:text-primary transition-colors"
+                  >Розетки и выключатели</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="opacity-75 hover:text-primary transition-colors"
+                  >Установка УЗО</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="opacity-75 hover:text-primary transition-colors"
+                  >Умный дом</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="opacity-75 hover:text-primary transition-colors"
+                  >Ремонт и диагностика</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Блок с информацией -->
+          <div class="md:col-span-1">
+            <h3 class="text-lg font-bold mb-4 text-dark">Информация</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#advantages"
+                  class="opacity-75 hover:text-primary transition-colors"
+                  >Обо мне</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#pricing"
+                  class="opacity-75 hover:text-primary transition-colors"
+                  >Цены</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#portfolio"
+                  class="opacity-75 hover:text-primary transition-colors"
+                  >Портфолио</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#process"
+                  class="opacity-75 hover:text-primary transition-colors"
+                  >Процесс работы</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="opacity-75 hover:text-primary transition-colors"
+                  >Гарантии</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="opacity-75 hover:text-primary transition-colors"
+                  >Политика конфиденциальности</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Блок с контактами -->
+          <div class="md:col-span-1">
+            <h3 class="text-lg font-bold mb-4 text-dark">Контакты</h3>
+            <ul class="space-y-4">
+              <!-- <li class="flex items-start">
+                <i class="fas fa-map-marker-alt text-primary mt-1 mr-3"></i>
+                <span class="opacity-75"
+                  >г. Москва, ул. Электриков, д.10, офис 505</span
+                >
+              </li> -->
+              <li class="flex items-start">
+                <i class="fas fa-phone-alt text-primary mt-1 mr-3"></i>
+                <a
+                  href="tel:+79001234567"
+                  class="opacity-75 hover:text-primary transition-colors"
+                  >+7 (900) 123-45-67</a
+                >
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-envelope text-primary mt-1 mr-3"></i>
+                <a
+                  href="mailto:info@maxpro.ru"
+                  class="opacity-75 hover:text-primary transition-colors"
+                  >info@maxpro.ru</a
+                >
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-clock text-primary mt-1 mr-3"></i>
+                <span class="opacity-75"
+                  >Пн-Пт: 9:00-20:00<br />Сб: 10:00-17:00</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-200 mt-12 pt-6 text-center">
+          <p class="opacity-75">© 2025 MAXPRO. Все права защищены.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Кнопка прокрутки вверх -->
+    <button
+      id="scroll-to-top"
+      class="fixed bottom-6 right-6 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 z-50 hover:bg-primary/90"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+      // Мобильное меню
+      document
+        .getElementById("mobile-menu-button")
+        .addEventListener("click", function () {
+          const mobileMenu = document.getElementById("mobile-menu");
+          mobileMenu.classList.toggle("hidden");
+        });
+
+      // Закрытие мобильного меню при клике на ссылку
+      document.querySelectorAll("#mobile-menu a").forEach((link) => {
+        link.addEventListener("click", function () {
+          document.getElementById("mobile-menu").classList.add("hidden");
+        });
+      });
+
+      // Кнопка прокрутки вверх
+      const scrollToTopButton = document.getElementById("scroll-to-top");
+
+      window.addEventListener("scroll", function () {
+        if (window.pageYOffset > 300) {
+          scrollToTopButton.classList.remove("opacity-0", "invisible");
+          scrollToTopButton.classList.add("opacity-100", "visible");
+        } else {
+          scrollToTopButton.classList.remove("opacity-100", "visible");
+          scrollToTopButton.classList.add("opacity-0", "invisible");
+        }
+      });
+
+      scrollToTopButton.addEventListener("click", function () {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+
+      // Плавная прокрутка для якорных ссылок
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          if (targetId === "#") return;
+
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
